@@ -22,6 +22,16 @@ This project was developed using the following technologies:
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.io/)
 
+## 🧪 SOLID
+
+Princípios:
+
+- Single Responsibility Principle: Cada classe tem uma responsabilidade única;
+- Open/Closed Principle: As classes da aplicação devem ser abertas para extensão mas fechadas para modificação;
+- Liskov Substitution Principle: Nós devemos poder substituir uma classe pai por uma herança dela e tudo continuar funcionando;
+- Interface Segregation Principle: Segregar interfaces;
+- Dependency Inversion Principle: Ao invés da classe buscar as dependências que ela precisa o contexto informa a classe as dependências necessárias;
+
 ## 🚀 Getting started
 
 Clone the project and access the folder.
