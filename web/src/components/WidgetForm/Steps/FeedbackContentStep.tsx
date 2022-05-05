@@ -7,22 +7,28 @@ import { ScreenShotButton } from "../ScreenShotButton";
 interface FeedbackContentStepProps {
   feedbackType: FeedbackType;
   onFeedbackRestartRequest: () => void;
+  onFeedbackSent: () => void;
 }
 
-export function FeedbackContentStep(props: FeedbackContentStepProps) {
-  const feedbackTypeInfo = feedbackTypes[props.feedbackType]
+export function FeedbackContentStep({
+  feedbackType,
+  onFeedbackRestartRequest,
+  onFeedbackSent,
+}: FeedbackContentStepProps) {
+  const feedbackTypeInfo = feedbackTypes[feedbackType]
   
   const [screenshot, setScreenshot] = useState<string | null>(null)
   const [comment, setComment] = useState('')
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault()
+    onFeedbackSent()
   }
 
   return <>
     <header>
       <button
-        onClick={props.onFeedbackRestartRequest}
+        onClick={onFeedbackRestartRequest}
         type="button"
         className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100"
       >
