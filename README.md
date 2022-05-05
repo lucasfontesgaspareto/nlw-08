@@ -16,8 +16,8 @@
 
 This project was developed using the following technologies:
 
-- [ViteJS](https://vitejs.dev/)
 - [NodeJS](https://nodejs.org/)
+- [ViteJS](https://vitejs.dev/)
 - [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.io/)
