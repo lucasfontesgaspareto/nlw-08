@@ -1,7 +1,22 @@
+import { useEffect } from "react"
+import { ThemeSwitcher } from "./components/ThemeSwitcher"
 import { Widget } from "./components/Widget"
 
 function App() {
-  return <div className="bg-[#121212] min-h-screen">
+
+  useEffect(() => {
+    if (!localStorage.theme) {
+      localStorage.theme = 'light'
+    }
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
+  return <div className="bg-white dark:bg-[#121212] min-h-screen">
     <header className="bg-zinc-800 py-4 mb-12">
       <div className="container mx-auto flex items-center justify-between">
         <div className="bg-zinc-700 h-10 w-40 rounded-lg"></div>
@@ -11,6 +26,10 @@ function App() {
           <div className="bg-zinc-700 h-4 w-24 rounded-full"></div>
           <div className="bg-zinc-700 h-4 w-24 rounded-full"></div>
           <div className="bg-zinc-700 h-4 w-24 rounded-full"></div>
+        </div>
+
+        <div>
+          <ThemeSwitcher/>
         </div>
 
         <div className="flex items-center justify-between gap-4">
