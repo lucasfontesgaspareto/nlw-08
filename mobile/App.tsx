@@ -2,9 +2,9 @@ import 'react-native-gesture-handler'
 
 import React from 'react';
 import { View } from 'react-native';
+import { Inter_400Regular, Inter_500Medium, useFonts } from '@expo-google-fonts/inter';
 import { StatusBar } from 'expo-status-bar';
 import Widget from './src/components/Widget';
-import { Inter_400Regular, Inter_500Medium, useFonts } from '@expo-google-fonts/inter';
 import AppLoading from 'expo-app-loading';
 import { theme } from './src/theme';
 

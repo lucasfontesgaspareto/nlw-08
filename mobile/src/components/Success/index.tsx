@@ -11,7 +11,13 @@ import { styles } from './styles';
 import successImg from '../../assets/success.png'
 import { CopyRight } from '../CopyRight';
 
-export function Success() {
+interface SuccessProps {
+  onSendAnotherFeedback: () => void;
+}
+
+export function Success({
+  onSendAnotherFeedback
+}: SuccessProps) {
   return (
     <View style={styles.container}>
       <Image
@@ -25,7 +31,7 @@ export function Success() {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => {}}
+        onPress={onSendAnotherFeedback}
       >
         <Text
           style={styles.buttonTitle}
