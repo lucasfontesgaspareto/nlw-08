@@ -68,7 +68,7 @@ export function WidgetForm() {
     }
 
     <footer className="text-xs text-neutral-400">
-      <span>Feito com <span className="text-[#633bbc]">♥</span> pela <a className="underline underline-offset-2" href="https://www.rocketseat.com.br/" >Rocketseat</a></span>
+      <span>Feito com <span className="text-[#633bbc]">♥</span> por <a className="underline underline-offset-2" href="https://github.com/lucasfontesgaspareto/nlw-return-impulse" >devgaspa</a></span>
     </footer>
   </div>
 }

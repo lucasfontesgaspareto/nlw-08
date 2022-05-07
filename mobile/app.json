@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Returnify",
+    "slug": "returnify",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Returnify - Widget para você recolher feedbacks dos clientes do seu software\n * Disponível para mobile & web",
+    "githubUrl": "https://github.com/lucasfontesgaspareto/nlw-return-impulse/tree/main/mobile"
   }
 }
