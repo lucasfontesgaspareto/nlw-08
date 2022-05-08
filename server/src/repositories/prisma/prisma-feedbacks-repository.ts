@@ -11,4 +11,10 @@ export class PrismaFeedbacksRepository implements FeedbacksRepository {
       }
     })
   }
+
+  async list() {
+    const feedbacks = await prisma.feedback.findMany()
+    console.log(feedbacks)
+    return feedbacks.map(feedback => feedback as FeedbackCreateData)
+  }
 }
