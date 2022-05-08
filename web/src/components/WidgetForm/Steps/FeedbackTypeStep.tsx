@@ -8,7 +8,7 @@ interface FeedbackTypeStepProps {
 export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
   return <>
     <header>
-      <span className="text-xl leading-6 mr-8">Deixe seu feedback</span>
+      <span className="text-xl leading-6 mr-8 text-zinc-500 dark:text-zinc-400">Deixe seu feedback</span>
 
       <CloseButton/>
     </header>
@@ -18,7 +18,7 @@ export function FeedbackTypeStep(props: FeedbackTypeStepProps) {
         Object.entries(feedbackTypes).map(([key, value]) => {
           return <button
             key={key}
-            className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none transition-colors"
+            className="bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none transition-colors"
             type="button"
             onClick={() => props.onFeedbackTypeChange(key as FeedbackType)}
           >

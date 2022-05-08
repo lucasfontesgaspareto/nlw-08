@@ -51,7 +51,7 @@ export function FeedbackContentStep({
         <ArrowLeft weight="bold" className="w-4 h-4"/>
       </button>
 
-      <span className="text-xl leading-6 flex items-center gap-2">
+      <span className="text-xl leading-6 flex items-center gap-2 text-zinc-500 dark:text-zinc-400">
         <img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} className="w-6 h-6"/>
         {feedbackTypeInfo.title}
       </span>
@@ -62,7 +62,7 @@ export function FeedbackContentStep({
     <form className="my-4 w-full" onSubmit={handleSubmitFeedback}>
       <textarea
         onChange={event => setComment(event.target.value)}
-        className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 p-2 border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none focus:outline-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
+        className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-500 dark:placeholder-zinc-400 text-zinc-800 dark:text-zinc-100 p-2 border-zinc-300 dark:border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none focus:outline-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
         placeholder="Conte com detalhes o que está acontecendo..."
       ></textarea>
 

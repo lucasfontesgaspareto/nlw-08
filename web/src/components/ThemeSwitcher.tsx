@@ -20,10 +20,10 @@ export function ThemeSwitcher() {
     <Switch
       checked={isDarkMode}
       onChange={handleSwitchTheme}
-      className={`${isDarkMode ? 'bg-zinc-700' : 'bg-zinc-600'}
+      className={`${isDarkMode ? 'bg-zinc-700' : 'bg-zinc-200'}
         relative inline-flex h-[38px] w-[74px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
     >
-      <span className="sr-only">Ativar dark mode</span>
+      <span className="sr-only">Habilitar tema dark</span>
       <span
         aria-hidden="true"
         className={`${isDarkMode ? 'translate-x-9 bg-zinc-900' : 'translate-x-0   bg-white'}
