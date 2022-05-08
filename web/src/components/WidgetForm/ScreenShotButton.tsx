@@ -29,7 +29,7 @@ export function ScreenShotButton({
     return <button
       onClick={() => onScreenshotTook(null)}
       type="button"
-      className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors"
+      className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-light-text-secondary hover:text-light-text-primary dark:text-dark-text-secondary dark:hover:text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-surface-primary focus:dark:ring-offset-dark-surface-primary focus:ring-brand transition-colors"
       style={{
         backgroundImage: `url(${screenshot})`,
         backgroundPosition: `right bottom`,
@@ -43,9 +43,8 @@ export function ScreenShotButton({
   return <button
     onClick={handleTakeScreenshot}
     type="button"
-    className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors"
+    className="p-2 bg-light-surface-secondary dark:bg-dark-surface-secondary text-light-text-secondary hover:text-light-text-primary dark:text-dark-text-secondary dark:hover:text-dark-text-primary rounded-md border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-surface-primary focus:dark:ring-offset-dark-surface-primary focus:ring-brand transition-colors"
   >
-    {isTakeingScreenshot ? <Loading /> :
-    <Camera className="w-6 h-6 text-zinc-100"/>}
+    {isTakeingScreenshot ? <div className="text-light-text-primary dark:text-dark-text-primary"><Loading /></div> : <Camera className="w-6 h-6"/>}
   </button>
 }
