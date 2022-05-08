@@ -1,13 +1,15 @@
 import { Detective } from "phosphor-react";
 import { FeedbackType, feedbackTypes } from "./WidgetForm";
 
+export interface FeedbackProps {
+  id: string;
+  type: FeedbackType,
+  comment: string;
+  screenshot?: string;
+}
+
 interface InboxFeedbackProps {
-  feedback: {
-    id: string;
-    type: FeedbackType,
-    comment: string;
-    screenshot?: string;
-  }
+  feedback: FeedbackProps
 }
 
 export function InboxFeedback({ feedback }: InboxFeedbackProps) {

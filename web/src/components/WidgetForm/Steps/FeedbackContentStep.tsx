@@ -30,15 +30,19 @@ export function FeedbackContentStep({
 
     event.preventDefault()
 
-    await api.post('/feedbacks',{
-      type: feedbackType,
-      comment,
-      screenshot,
-    })
+    try {
+      await api.post('/feedbacks',{
+        type: feedbackType,
+        comment,
+        screenshot,
+      })
 
-    setIsSendingFeedback(false)
-
-    onFeedbackSent()
+      onFeedbackSent()
+    } catch (error) {
+      
+    } finally {
+      setIsSendingFeedback(false)
+    }
   }
 
   return <>
